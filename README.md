@@ -68,6 +68,31 @@ The Flight Info Microservice is designed to handle client requests for flight in
 - **Database:** MongoDB for data storage and retrieval.
 - **API:** RESTful API design for communication between frontend and backend.
 
+Here's a simple README listing the libraries used in your project:
+
+---
+
+# Flight Information Service & Notification System
+
+## Libraries and tools
+
+### Backend
+- Flask
+- pymongo
+- bson
+- kafka-python
+- Flask-CORS
+- postman
+
+### Frontend
+- React
+- react-bootstrap
+- bootstrap
+- Custom CSS (`FlightList.css`)
+
+### Additional
+- datetime
+
 ## Getting Started
 
 ### Prerequisites
