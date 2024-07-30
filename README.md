@@ -40,8 +40,8 @@ The Flight Info Microservice is designed to handle client requests for flight in
 
 ## Technology Stack
 
-- **Frontend:** Technologies like HTML, CSS, JavaScript (or frameworks like React, Angular).
-- **Backend:** Node.js, Express.js (or other backend frameworks).
+- **Frontend:** React.
+- **Backend:** Flask-pyton.
 - **Database:** MongoDB for data storage and retrieval.
 - **API:** RESTful API design for communication between frontend and backend.
 
