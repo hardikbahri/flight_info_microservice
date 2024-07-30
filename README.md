@@ -1,45 +1,100 @@
-# Notifications Microservice
+## Overview
+
+The Flight Info Microservice is designed to handle client requests for flight information. The system architecture includes a frontend for user interaction, a backend for processing API calls and querying the database, and a MongoDB database for storing flight data.
+
+
+## Architecture Components
+
+1. **Frontend:**
+   - **Description:** The user interface where clients enter flight details.
+   - **Role:** Captures user input and displays the flight information retrieved from the backend.
+
+2. **Backend:**
+   - **Description:** The core processing unit of the microservice.
+   - **Role:** Handles API calls from the frontend, queries the MongoDB database, and returns the processed data.
+
+3. **MongoDB Database:**
+   - **Description:** The database system used for storing flight data.
+   - **Role:** Stores and manages flight information, enabling efficient querying and retrieval of data.
+
+4. **Flight Info Microservice:**
+   - **Description:** The specific service responsible for managing flight-related data.
+   - **Role:** Interfaces with the backend to provide flight information as per client requests.
+
+## Workflow
+
+1. **Client Request:**
+   - A client enters flight details via the frontend interface.
+
+2. **API Call:**
+   - The frontend sends an API call to the backend with the client's flight information.
+
+3. **Database Query:**
+   - The backend queries the MongoDB database to retrieve the requested flight data.
+
+4. **Data Retrieval:**
+   - The database returns the queried data to the backend.
+
+5. **Response to Client:**
+   - The backend processes the data and sends a response back to the frontend, which displays the information to the client.
+
+## Technology Stack
+
+- **Frontend:** Technologies like HTML, CSS, JavaScript (or frameworks like React, Angular).
+- **Backend:** Node.js, Express.js (or other backend frameworks).
+- **Database:** MongoDB for data storage and retrieval.
+- **API:** RESTful API design for communication between frontend and backend.
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/flight-info-microservice.git
+   cd flight-info-microservice
+   ```
+
+2. **Install backend dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up MongoDB:**
+   - Make sure MongoDB is installed and running.
+
+4. **Start the backend server:**
+   ```bash
+   npm start
+   ```
+
+5. **Frontend setup:**
+   - Navigate to the frontend directory and follow similar steps to install dependencies and start the frontend server.
+
+
+
+# Flight Info Microservice
 
 ![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
 
-### EMAIL NOTIFICATIONS
-![image](https://github.com/user-attachments/assets/342d4970-7b8f-44b6-94fc-efe2dca7dd27)
-
-Whenever flight status is changed, the code automatically detects the change using kafka, the backend checks the users database and sends email to the users who have booked the same flight on that particular date, Everything is automated
-
-### REAL TIME UPDATES!
-![image](https://github.com/user-attachments/assets/b6e43316-bb89-4d84-916e-6bda19e0f4ed)
-
-No need to reload the site, this microservice uses kafka and mongodb replica sets to display real time updates on the website! Whenever the database is changed, the code automatically detects the changes, the frontend uses polling mechanism to fetch the updated changes , everything is automatic!
+### Flight Status!
+![image](https://github.com/user-attachments/assets/5dc9e9c6-7316-4a44-92bc-d5d2e9921a50)
 
 ### Architecture
-![image](https://github.com/user-attachments/assets/2ed8bb51-5d50-4a9d-bc56-70fbabbd0f5c)
+![Uploading image.png…]()
+
 
 ### Flights collection in mongodb
 ![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
 ### users database collection in mongodb
 ![image](https://github.com/user-attachments/assets/d9753cf5-2418-41d9-bb65-e647f0f2f795)
 
-### Architecture Overview
 
-1. **Database Change Detected**: A change in the MongoDB database (e.g., a flight status update) is detected.
-2. **Change Received**: The backend service receives the change.
-3. **Process Change Stream**: The backend processes the change stream.
-4. **Send Message**: The backend sends a message to the Kafka Producer.
-5. **Send Topics**: The Kafka Producer sends the message to the appropriate Kafka topic.
-6. **Consumer Message**: The Kafka Consumer receives the message from the Kafka topic.
-7. **API Call Using Polling Mechanism**: The frontend makes an API call to the backend using a polling mechanism to get updates.
-8. **Real-Time Updates, Push Notifications**: The frontend receives real-time updates and push notifications.
-9. **Email Sent**: An email is sent as part of the notification process.
-
-### Components
-
-- **MongoDB**: Acts as the database where changes are detected.
-- **Backend**: Processes the change stream and sends messages to Kafka.
-- **Kafka Producer**: Sends messages to Kafka topics.
-- **Kafka Consumer**: Consumes messages from Kafka topics.
-- **Frontend**: Uses API polling to fetch updates and displays real-time notifications and flight status updates.
-- **Email Service**: Sends email notifications as part of the notification workflow.
 
 ### File Structure
 
@@ -48,23 +103,7 @@ No need to reload the site, this microservice uses kafka and mongodb replica set
 
 ### How It Works
 
-#### Backend Service (`change_streams.py`)
-
-1. **Flask Setup**: The Flask app is set up with CORS enabled for the `/update` endpoint.
-2. **MongoDB Connection**: Connects to MongoDB to access the flight status and user information.
-3. **Email Function**: Defines a function to send email notifications using SMTP.
-4. **Notification Function**: Combines email and SMS notifications and sends them to users based on flight updates.
-5. **Kafka Consumer**: Listens to the `flight_updates` topic on Kafka and processes messages to notify users.
-6. **API Endpoint**: Provides an endpoint to fetch the latest flight update.
-
-#### Kafka Producer (`notify_users.py`)
-
-1. **MongoDB Connection**: Connects to MongoDB to watch for changes in the flights collection.
-2. **Kafka Setup**: Configures Kafka producer to send messages to the `flight_updates` topic.
-3. **Process Change Function**: Processes the change stream from MongoDB and sends relevant updates to Kafka.
-4. **Change Stream Listener**: Listens to changes in the flights collection and processes them.
-
-### Running the Application
+### Running the Application( only if you are using notification_service along with this microservice)
 
 1. **Start MongoDB**: Ensure MongoDB is running locally.
 2. **Start Kafka**: Ensure Kafka is running locally.
