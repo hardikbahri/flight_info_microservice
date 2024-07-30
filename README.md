@@ -3,6 +3,16 @@
 ## Overview
 
 The Flight Info Microservice is designed to handle client requests for flight information. The system architecture includes a frontend for user interaction, a backend for processing API calls and querying the database, and a MongoDB database for storing flight data.
+
+## Features- Only First feature in this microservice from the list, rest in the notifications microservice
+- **Integration with Airport Systems:** Pull data from a custom-created MongoDB airport database to display flight status.
+- **Automatic Implementation:** All features are triggered by database actions (insert/update/delete).
+- **Real-Time Push Notifications:** Automatically send notifications for flight status changes.
+- **Real-Time Flight Status Updates:** Display updates without the need for page reloads.
+- **Automated Email Alerts:** Send real-time email alerts for updates, uses SMTP.
+- **Scalable Architecture:** Utilizes MongoDB replica sets and Kafka for high availability and scalability.
+- **User-Friendly Interface:** Built with React for a seamless user experience.
+  
 ![image](https://github.com/user-attachments/assets/b6e43316-bb89-4d84-916e-6bda19e0f4ed)
 
 ### Architecture
