@@ -18,6 +18,9 @@ The Flight Info Microservice is designed to handle client requests for flight in
 ### Architecture
 ![image](https://github.com/user-attachments/assets/5dc9e9c6-7316-4a44-92bc-d5d2e9921a50)
 
+### API Calls
+![image](https://github.com/user-attachments/assets/6b4e3e6b-343b-484f-9f28-db3ccf3dc5b3)
+
 ### Flights collection in mongodb
 ![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
 ### users database collection in mongodb
