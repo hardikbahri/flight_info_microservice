@@ -1,0 +1,61 @@
+/* FlightList.css */
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+}
+.badge-container {
+  position: fixed; /* Fixed position so it stays in place when scrolling */
+  top: 10px; /* Adjust the distance from the top */
+  right: 10px; /* Adjust the distance from the right */
+  z-index: 9999; /* Ensure it appears above other content */
+}
+
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+}
+
+.flight-list {
+  padding: 2rem;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flight-results {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.flight-item {
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.flight-item:hover {
+  background-color: #f8f9fa;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}

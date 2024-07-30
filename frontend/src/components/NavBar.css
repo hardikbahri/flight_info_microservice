@@ -1,0 +1,9 @@
+/* FlightList.css */
+.navbar-indigo {
+    background-color: rgba(5, 44, 152, 0.8) /* Example Indigo color */
+  }
+  
+  .navbar-indigo .navbar-brand img {
+    filter: brightness(0) invert(1); /* Optional: to adjust logo visibility on a dark background */
+  }
+  
