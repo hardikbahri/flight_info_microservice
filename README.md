@@ -49,7 +49,7 @@ The Flight Info Microservice is designed to handle client requests for flight in
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/)
+- reactjs
 - [MongoDB](https://www.mongodb.com/)
 
 ### Installation
