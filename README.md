@@ -86,7 +86,7 @@ The Flight Info Microservice is designed to handle client requests for flight in
 5. **Frontend setup:**
    - Navigate to the frontend directory and follow similar steps to install dependencies and start the frontend server.
 
-### Running the Application( only if you are using notification_service along with this microservice)
+## Running the Application( only if you are using notification_service along with this microservice)
 
 1. **Start MongoDB**: Ensure MongoDB is running locally.
 2. **Start Kafka**: Ensure Kafka is running locally.
@@ -99,19 +99,6 @@ The Flight Info Microservice is designed to handle client requests for flight in
    python app.py
    ```
 5. **Frontend**: Make API calls to the `/update` endpoint to fetch the latest flight updates.
-
-### Conclusion
-
-This notification microservice efficiently processes flight status updates and notifies users in real-time via email and SMS. The combination of MongoDB, Kafka, and Flask provides a robust and scalable solution for real-time notifications.
-
----
-
-This README provides a clear overview of the architecture and the workflow, with references to the relevant files without including the entire code.
-## Features
-
-- Real-time notification delivery
-- Integration with Kafka for event streaming
-- MongoDB replica set for database high availability
 
 ## Installation
 
