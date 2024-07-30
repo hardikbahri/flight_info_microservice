@@ -88,6 +88,7 @@ The Flight Info Microservice is designed to handle client requests for flight in
 5. **Set up the backend:**
    - Create a virtual environment:
      ```bash
+     cd backend
      python -m venv venv
      source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
      ```
@@ -135,14 +136,6 @@ To get started with the Notifications Microservice, follow these steps:
    pip install -r requirements.txt
    ```
 
-3. **Set Up Environment Variables**
-
-   Create a `.env` file in the root directory and set up the necessary environment variables. Example:
-
-   ```
-   DATABASE_URL=your_database_url
-   KAFKA_BROKER_URL=your_kafka_broker_url
-   ```
 
 ## Usage
 
