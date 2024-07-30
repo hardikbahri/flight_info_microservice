@@ -68,9 +68,10 @@ The Flight Info Microservice is designed to handle client requests for flight in
    ```bash
    git clone https://github.com/your-username/flight-info-microservice.git
    cd flight-info-microservice
+   cd frontend
    ```
 
-2. **Install backend dependencies:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
@@ -78,13 +79,28 @@ The Flight Info Microservice is designed to handle client requests for flight in
 3. **Set up MongoDB:**
    - Make sure MongoDB is installed and running.
 
-4. **Start the backend server:**
+4. **Start the server:**
    ```bash
    npm start
    ```
+   
 
-5. **Frontend setup:**
-   - Navigate to the frontend directory and follow similar steps to install dependencies and start the frontend server.
+5. **Set up the backend:**
+   - Create a virtual environment:
+     ```bash
+     python -m venv venv
+     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+     ```
+   - Install the dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - Start the backend server:
+     ```bash
+     python app.py
+     ```
+6. **Set up MongoDB:**
+   - Ensure MongoDB is installed and running.
 
 ## Running the Application( only if you are using notification_service along with this microservice)
 
