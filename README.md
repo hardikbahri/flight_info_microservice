@@ -1,7 +1,22 @@
+# Flight Info Microservice
+
 ## Overview
 
 The Flight Info Microservice is designed to handle client requests for flight information. The system architecture includes a frontend for user interaction, a backend for processing API calls and querying the database, and a MongoDB database for storing flight data.
 
+![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
+
+### Flight Status!
+![image](https://github.com/user-attachments/assets/5dc9e9c6-7316-4a44-92bc-d5d2e9921a50)
+
+### Architecture
+![Uploading image.png…]()
+
+
+### Flights collection in mongodb
+![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
+### users database collection in mongodb
+![image](https://github.com/user-attachments/assets/d9753cf5-2418-41d9-bb65-e647f0f2f795)
 
 ## Architecture Components
 
@@ -75,33 +90,6 @@ The Flight Info Microservice is designed to handle client requests for flight in
 
 5. **Frontend setup:**
    - Navigate to the frontend directory and follow similar steps to install dependencies and start the frontend server.
-
-
-
-# Flight Info Microservice
-
-![image](https://github.com/user-attachments/assets/942dfbb3-fe2f-46ff-9a74-b9116082cbc2)
-
-### Flight Status!
-![image](https://github.com/user-attachments/assets/5dc9e9c6-7316-4a44-92bc-d5d2e9921a50)
-
-### Architecture
-![Uploading image.png…]()
-
-
-### Flights collection in mongodb
-![image](https://github.com/user-attachments/assets/9fa9e65b-92f5-46fc-a8fb-3d43f62c25ed)
-### users database collection in mongodb
-![image](https://github.com/user-attachments/assets/d9753cf5-2418-41d9-bb65-e647f0f2f795)
-
-
-
-### File Structure
-
-- `change_streams.py`: This file contains the Flask application that handles receiving flight updates from the Kafka topic and notifying users via email and SMS.
-- `notify_users.py`: This file handles the MongoDB change stream and sends relevant flight updates to a Kafka topic.
-
-### How It Works
 
 ### Running the Application( only if you are using notification_service along with this microservice)
 
