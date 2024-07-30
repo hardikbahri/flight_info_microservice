@@ -100,24 +100,8 @@ The Flight Info Microservice is designed to handle client requests for flight in
      ```bash
      python app.py
      ```
-6. **Set up MongoDB:**
-   - Ensure MongoDB is installed and running.
 
 ## Running the Application( only if you are using notification_service along with this microservice)
-
-1. **Start MongoDB**: Ensure MongoDB is running locally.
-2. **Start Kafka**: Ensure Kafka is running locally.
-3. **Run Kafka Producer**: 
-   ```sh
-   python producer.py
-   ```
-4. **Run Flask App**:
-   ```sh
-   python app.py
-   ```
-5. **Frontend**: Make API calls to the `/update` endpoint to fetch the latest flight updates.
-
-## Installation
 
 To get started with the Notifications Microservice, follow these steps:
 
@@ -136,12 +120,13 @@ To get started with the Notifications Microservice, follow these steps:
    pip install -r requirements.txt
    ```
 
+3. **Set Up Kafka and MongoDB replica sets**
 
-## Usage
+  ## Usage
 
 1. **Start Kafka**
 
-   To start Kafka, you need to run Zookeeper and Kafka servers:
+   To start Kafka, you need to run Zookeeper and Kafka servers in the Kafka folder:
 
    ```bash
    # Start Zookeeper
@@ -189,18 +174,18 @@ To get started with the Notifications Microservice, follow these steps:
    Start the microservice using:
 
    ```bash
-   python app.py
+   python change_streams.py
    ```
-
-   or, if you use a specific entry point:
 
    ```bash
-   flask run
+   python notify_users.py
    ```
+
+  
 
 4. **Access the API**
 
-   The microservice will be accessible at `http://localhost:5002` by default.
+   The microservice will be accessible at `http://localhost:5002` by default in /update endpoint.
 
 ## Contributing
 
